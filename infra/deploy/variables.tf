@@ -13,3 +13,12 @@ variable "contact" {
   default     = "tomdebruyne@gmail.com"
 }
 
+variable "db_username" {
+  description = "Username for the recipe app api database"
+  default     = "recipeapp"
+}
+
+variable "db_password" {
+  description = "Password for the Terraform database"
+
+}
