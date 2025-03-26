@@ -188,7 +188,7 @@ resource "aws_ecs_service" "api" {
   desired_count          = 1
   launch_type            = "FARGATE"
   platform_version       = "1.4.0"
-  enable_execute_command = aws_iam_role.task_execution_role
+  enable_execute_command = true
   network_configuration {
     assign_public_ip = true
 
