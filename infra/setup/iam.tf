@@ -156,6 +156,7 @@ data "aws_iam_policy_document" "rds" {
       "rds:DeleteDBSubnetGroup",
       "rds:CreateDBInstance",
       "rds:DeleteDBInstance",
+      "rds:AddTagsToResource",
       "rds:ListTagsForResource",
       "rds:ModifyDBInstance"
     ]
@@ -172,6 +173,10 @@ resource "aws_iam_policy" "rds" {
 resource "aws_iam_user_policy_attachment" "rds" {
   user       = aws_iam_user.cd.name
   policy_arn = aws_iam_policy.rds.arn
+}
+
+resource "aws_iam_service_linked_role" "rds" {
+  aws_service_name = "rds.amazonaws.com"
 }
 
 #########################
