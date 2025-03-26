@@ -79,7 +79,7 @@ resource "aws_ecs_task_definition" "api" {
         value = aws_db_instance.main.username
       },
       {
-        name  = "DB_PASSW"
+        name  = "DB_PASS"
         value = aws_db_instance.main.password
       },
       {
