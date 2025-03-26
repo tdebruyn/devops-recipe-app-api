@@ -94,7 +94,7 @@ resource "aws_subnet" "private_a" {
   availability_zone = "${data.aws_region.current.name}a"
 
   tags = {
-    Name : "${local.prefix}-private-a"
+    Name = "${local.prefix}-private-a"
   }
 
 }
@@ -105,7 +105,7 @@ resource "aws_subnet" "private_b" {
   availability_zone = "${data.aws_region.current.name}b"
 
   tags = {
-    Name : "${local.prefix}-private-b"
+    Name = "${local.prefix}-private-b"
   }
 
 }
